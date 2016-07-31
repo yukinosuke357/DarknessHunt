@@ -26,7 +26,6 @@ public class NejikoController : MonoBehaviour {
   public float speedJump;
   public float accelerationZ;
 
-  bool stateSlide = false;
   bool jumpMove = false;
 
   public int Life(){
@@ -54,7 +53,7 @@ public class NejikoController : MonoBehaviour {
     if(Input.GetKeyDown("right")) MoveToRight();
     if(Input.GetKeyDown("up")) Jump();
     if(Input.GetKeyDown("down")) MoveToSlide();
-    if(Input.GetKeyDown("Jump")) ShotBullet();
+    if(Input.GetKeyDown("space")) ShotBullet();
 
     if(IsStan()){
       //動きを止め気絶状態から復帰カウントを進める
@@ -123,6 +122,7 @@ public class NejikoController : MonoBehaviour {
   public void ShotBullet(){
     if(IsStan()) return;
     Vector3 position = transform.position;
+    position.z += 2;
     Instantiate(bulletPrefab, position, Quaternion.identity);
   }
 
