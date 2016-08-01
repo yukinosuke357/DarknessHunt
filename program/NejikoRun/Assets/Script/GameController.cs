@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
   public NejikoController nejiko;
   public Text scoreLabel;
+  public Text shotLabel;
   public LifePanel lifePanel;
 
   void Update () {
     //スコアラベルを更新
     int score = CalcScore();
     scoreLabel.text = "Score : " + score + "m";
+
+    int shot = nejiko.ShotPower();
+    shotLabel.text = "Shot : " + shot ;
 
     //ライフパネルを更新
     lifePanel.UpdateLife(nejiko.Life());

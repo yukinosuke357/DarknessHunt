@@ -7,6 +7,9 @@ public class NejikoController : MonoBehaviour {
   const int MaxLane = 1;
   const float LaneWidth = 2.0f;
   const int DefaultLife = 3;
+  const int MaxShotPower = 6;
+  const int ShotRecoverySecond = 3;
+  const int ShotWaitTime = 1;
   const float StunDeration = 0.5f;
   const float slideDeration = 1.0f;
   
@@ -17,6 +20,9 @@ public class NejikoController : MonoBehaviour {
   Vector3 moveDirection = Vector3.zero;
   int targetLane;
   int life = DefaultLife;
+  int shotPower = MaxShotPower;
+  int shotSecond;
+  int shotWait = ShotWaitTime;
   float recoverTime = 0.0f;
   float slideTime = 0.0f;
 
@@ -30,6 +36,10 @@ public class NejikoController : MonoBehaviour {
 
   public int Life(){
     return life;
+  }
+
+  public int ShotPower(){
+    return shotPower;
   }
 
   public bool IsStan(){
@@ -55,6 +65,10 @@ public class NejikoController : MonoBehaviour {
     if(Input.GetKeyDown("down")) MoveToSlide();
     if(Input.GetKeyDown("space")) ShotBullet();
 
+    if( shotPower < MaxShotPower && shotSecond <= 0 ){
+      StartCoroutine(RecoverShot());
+    }
+
     if(IsStan()){
       //動きを止め気絶状態から復帰カウントを進める
       moveDirection.x = 0.0f;
@@ -74,7 +88,11 @@ public class NejikoController : MonoBehaviour {
     }
 
     //重力文の力を毎フレーム追加
-    moveDirection.y -= gravity * Time.deltaTime;
+    if(IsSlide()){
+      moveDirection.y -= 5 * gravity * Time.deltaTime;
+    }else{
+      moveDirection.y -= gravity * Time.deltaTime;
+    }
 
     //移動実行
     Vector3 globalDirection = transform.TransformDirection(moveDirection);
@@ -121,9 +139,20 @@ public class NejikoController : MonoBehaviour {
 
   public void ShotBullet(){
     if(IsStan()) return;
+    if(shotPower <= 0) return;
+    if(shotWait < ShotWaitTime) return;
+    
     Vector3 position = transform.position;
     position.z += 2;
     Instantiate(bulletPrefab, position, Quaternion.identity);
+
+    ConsumeShotPower();
+  }
+
+  void ConsumeShotPower(){
+    shotPower--;
+    shotWait--;
+    StartCoroutine(RecoverShotTime());
   }
 
   //CharacterControllerにコリジョンが生じたときの処理
@@ -141,5 +170,21 @@ public class NejikoController : MonoBehaviour {
       //ヒットしたオブジェクトは削除
       Destroy(hit.gameObject);
     }
+  }
+
+  IEnumerator RecoverShot(){
+    shotSecond = ShotRecoverySecond;
+
+    while(shotSecond > 0){
+      yield return new WaitForSeconds(1.0f);
+      shotSecond--;
+    }
+    shotPower++;
+    if(shotPower > MaxShotPower) shotPower = MaxShotPower;
+  }
+
+  IEnumerator RecoverShotTime(){
+    yield return new WaitForSeconds(1.0f);
+    shotWait++;
   }
 }
