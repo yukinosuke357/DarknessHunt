@@ -6,7 +6,7 @@ public class NejikoController : MonoBehaviour {
   const int MinLane = -1;
   const int MaxLane = 1;
   const float LaneWidth = 2.0f;
-  const int DefaultLife = 3;
+  const int DefaultLife = 1;
   const int MaxShotPower = 6;
   const int ShotRecoverySecond = 3;
   const int ShotWaitTime = 1;
@@ -23,6 +23,7 @@ public class NejikoController : MonoBehaviour {
   int shotPower = MaxShotPower;
   int shotSecond;
   int shotWait = ShotWaitTime;
+  int nearMiss = 0;
   float recoverTime = 0.0f;
   float slideTime = 0.0f;
 
@@ -40,6 +41,19 @@ public class NejikoController : MonoBehaviour {
 
   public int ShotPower(){
     return shotPower;
+  }
+
+  public int NearMiss(){
+    return nearMiss;
+  }
+
+  public void NearMissAdd(){
+    nearMiss++;
+    if(nearMiss >= 3) nearMiss = 3;
+  }
+
+  public void NearMissReset(){
+    nearMiss = 0;
   }
 
   public bool IsStan(){
@@ -144,7 +158,10 @@ public class NejikoController : MonoBehaviour {
     
     Vector3 position = transform.position;
     position.z += 2;
-    Instantiate(bulletPrefab, position, Quaternion.identity);
+    GameObject bullet = (GameObject)Instantiate(bulletPrefab, position, Quaternion.identity);
+    //bullet.bulletPower = (int)NearMiss();
+    //bullet.SetBulletPower(power);
+    NearMissReset();
 
     ConsumeShotPower();
   }
@@ -169,6 +186,12 @@ public class NejikoController : MonoBehaviour {
 
       //ヒットしたオブジェクトは削除
       Destroy(hit.gameObject);
+    }
+  }
+
+  void OnTriggerEnter(Collider other){
+    if(other.gameObject.tag == "Robo"){
+      NearMissAdd();
     }
   }
 
