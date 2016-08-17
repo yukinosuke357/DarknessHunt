@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour {
   public float accelerationZ;
   public float speedZ;
   float initialPosition;
+  public int bulletPower = 0;
 
   void Start () {
     initialPosition = (float)transform.position.z;
@@ -29,5 +30,9 @@ public class BulletController : MonoBehaviour {
       Destroy(hit.gameObject);
       Destroy(this.gameObject);
     }
+  }
+
+  public void SetBulletPower(int power){
+    bulletPower = power;
   }
 }

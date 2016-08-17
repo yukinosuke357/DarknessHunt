@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
   public NejikoController nejiko;
   public Text scoreLabel;
   public Text shotLabel;
+  public Text missLabel;
   public LifePanel lifePanel;
 
   void Update () {
@@ -17,6 +18,10 @@ public class GameController : MonoBehaviour {
     int shot = nejiko.ShotPower();
     shotLabel.text = "Shot : " + shot ;
 
+    int miss = nejiko.NearMiss();
+    missLabel.text = "nearmiss : " + miss ;
+
+    //ライフパネルを更新
     //ライフパネルを更新
     lifePanel.UpdateLife(nejiko.Life());
 
