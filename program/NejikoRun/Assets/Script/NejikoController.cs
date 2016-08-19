@@ -15,6 +15,7 @@ public class NejikoController : MonoBehaviour {
   
   CharacterController controller;
   Animator animator;
+  BulletController bullet;
   public GameObject bulletPrefab;
 
   Vector3 moveDirection = Vector3.zero;
@@ -68,6 +69,7 @@ public class NejikoController : MonoBehaviour {
   void Start () {
     //必要なコンポーネントを自動取得
     controller = GetComponent<CharacterController>();
+    //bullet = gameObject.AddComponent<BulletController>();
     //animator = GetComponent<Animator>();
   }
   
@@ -158,9 +160,9 @@ public class NejikoController : MonoBehaviour {
     
     Vector3 position = transform.position;
     position.z += 2;
-    GameObject bullet = (GameObject)Instantiate(bulletPrefab, position, Quaternion.identity);
-    //bullet.bulletPower = (int)NearMiss();
-    //bullet.SetBulletPower(power);
+    BulletController bullet = new BulletController(bulletPrefab, position, (int)NearMiss());
+    //BulletController bullet = gameObject.AddComponent<BulletController>();
+    //bullet.Initialize(bulletPrefab, position, NearMiss());
     NearMissReset();
 
     ConsumeShotPower();
