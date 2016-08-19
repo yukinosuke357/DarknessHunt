@@ -70,7 +70,7 @@ public class NejikoController : MonoBehaviour {
     //必要なコンポーネントを自動取得
     controller = GetComponent<CharacterController>();
     //bullet = gameObject.AddComponent<BulletController>();
-    //animator = GetComponent<Animator>();
+    animator = GetComponent<Animator>();
   }
   
   // Update is called once per frame
@@ -120,10 +120,10 @@ public class NejikoController : MonoBehaviour {
       jumpMove = false;
     }
 
-    if(!IsSlide()) controller.transform.localScale = new Vector3(1.0f, 1.5f, 1.0f);
+    if(!IsSlide()) controller.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
     //速度が0以上なら走っているフラグをtrueにする
-    //animator.SetBool("run", moveDirection.z > 0.0f);
+    animator.SetBool("run", moveDirection.z > 0.0f);
   }
 
   //左のレーンに移動を開始
