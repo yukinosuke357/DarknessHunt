@@ -11,11 +11,12 @@ public class NejikoController : MonoBehaviour {
   const int ShotRecoverySecond = 3;
   const int ShotWaitTime = 1;
   const float StunDeration = 0.5f;
-  const float slideDeration = 1.0f;
+  const float slideDeration = 2.0f;
   
   CharacterController controller;
   Animator animator;
   BulletController bullet;
+  public GameObject effectPrefab;
   public GameObject bulletPrefab;
 
   Vector3 moveDirection = Vector3.zero;
@@ -120,7 +121,7 @@ public class NejikoController : MonoBehaviour {
       jumpMove = false;
     }
 
-    if(!IsSlide()) controller.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+//    if(!IsSlide()) animator.SetTrigger("slide");
 
     //速度が0以上なら走っているフラグをtrueにする
     animator.SetBool("run", moveDirection.z > 0.0f);
@@ -141,15 +142,18 @@ public class NejikoController : MonoBehaviour {
   }
 
   public void Jump(){
+    Debug.Log("jump");
     if(IsStan()) return;
     if(controller.isGrounded){
+      Debug.Log("jump speed set");
       moveDirection.y = speedJump;
     }
   }
 
   public void MoveToSlide(){
     if(IsStan()) return;
-    controller.transform.localScale = new Vector3(1.0f, 0.3f, 1.0f);
+ //   controller.transform.localScale = new Vector3(1.0f, 0.3f, 1.0f);
+    animator.SetTrigger("slide");
     slideTime = slideDeration;
   }
 
@@ -184,7 +188,7 @@ public class NejikoController : MonoBehaviour {
       recoverTime = StunDeration;
 
       //ダメージトリガーを設定
-      //animator.SetTrigger("damage");
+      animator.SetTrigger("down");
 
       //ヒットしたオブジェクトは削除
       Destroy(hit.gameObject);
@@ -192,8 +196,12 @@ public class NejikoController : MonoBehaviour {
   }
 
   void OnTriggerEnter(Collider other){
+    Vector3 effect_position;
+    effect_position = other.transform.position;
+    effect_position.z += 2.0f;
     if(other.gameObject.tag == "Robo"){
       NearMissAdd();
+      Instantiate(effectPrefab, effect_position, Quaternion.identity);
     }
   }
 
