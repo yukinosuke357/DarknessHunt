@@ -12,6 +12,8 @@ public class NejikoController : MonoBehaviour {
   const int ShotWaitTime = 1;
   const float StunDeration = 0.5f;
   const float slideDeration = 2.0f;
+  const float shotDuaration = 0.4f;
+  const float shotRecoveryDuaration = 0.4f;
   
   CharacterController controller;
   Animator animator;
@@ -39,6 +41,10 @@ public class NejikoController : MonoBehaviour {
 
   public int Life(){
     return life;
+  }
+
+  public void LifeReduce(){
+    life--;
   }
 
   public int ShotPower(){
@@ -70,7 +76,6 @@ public class NejikoController : MonoBehaviour {
   void Start () {
     //必要なコンポーネントを自動取得
     controller = GetComponent<CharacterController>();
-    //bullet = gameObject.AddComponent<BulletController>();
     animator = GetComponent<Animator>();
   }
   
@@ -91,6 +96,7 @@ public class NejikoController : MonoBehaviour {
       moveDirection.x = 0.0f;
       moveDirection.z = 0.0f;
       recoverTime -= Time.deltaTime;
+      animator.SetTrigger("down");
     }else{
       //徐々に加速しZ方向に常に前進させる
       float acceleratedZ = moveDirection.z + (accelerationZ * Time.deltaTime);
@@ -159,7 +165,6 @@ public class NejikoController : MonoBehaviour {
   }
 
   public void ShotBullet(){
-    GameObject bullet;
     if(IsStan()) return;
     if(shotPower <= 0) return;
     if(shotWait < ShotWaitTime) return;
@@ -171,7 +176,7 @@ public class NejikoController : MonoBehaviour {
     }else{
       position.y += 0.3f;
     }
-    bullet = (GameObject)Instantiate(bulletPrefab, position, Quaternion.identity);
+    GameObject bullet = (GameObject)Instantiate(bulletPrefab, position, Quaternion.identity);
     bullet.SendMessage("SetBulletPower", NearMiss());
     NearMissReset();
 
@@ -194,7 +199,6 @@ public class NejikoController : MonoBehaviour {
       recoverTime = StunDeration;
 
       //ダメージトリガーを設定
-      animator.SetTrigger("down");
 
       //ヒットしたオブジェクトは削除
       //Destroy(hit.gameObject);
@@ -215,7 +219,7 @@ public class NejikoController : MonoBehaviour {
     shotSecond = ShotRecoverySecond;
 
     while(shotSecond > 0){
-      yield return new WaitForSeconds(1.0f);
+      yield return new WaitForSeconds(shotRecoveryDuaration);
       shotSecond--;
     }
     shotPower++;
@@ -223,7 +227,7 @@ public class NejikoController : MonoBehaviour {
   }
 
   IEnumerator RecoverShotTime(){
-    yield return new WaitForSeconds(1.0f);
+    yield return new WaitForSeconds(shotDuaration);
     shotWait++;
   }
 }

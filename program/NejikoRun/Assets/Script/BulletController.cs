@@ -8,8 +8,6 @@ public class BulletController : MonoBehaviour {
   float initialPosition;
   public int bulletPower = 1;
   public float bulletLife;
-  GameObject thisBullet;
-  public GameObject character;
 
   void Start () {
     initialPosition = (float)transform.position.z;

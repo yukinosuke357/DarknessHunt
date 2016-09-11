@@ -24,6 +24,8 @@ public int lifePoint;
 
   public void LifeReduce(int power){
     lifePoint = lifePoint - power;
-    Debug.Log("damage" + power + "life" + lifePoint );
   }
+
+  public virtual void UpdateMove(){}
+  public virtual void UpdateAttack(){}
 }
