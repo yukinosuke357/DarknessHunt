@@ -15,7 +15,7 @@ public class NejikoController : MonoBehaviour {
   
   CharacterController controller;
   Animator animator;
-  BulletController bullet;
+  //BulletController bullet;
   public GameObject effectPrefab;
   public GameObject bulletPrefab;
 
@@ -117,6 +117,7 @@ public class NejikoController : MonoBehaviour {
 
     //移動後設置してたらY方向の速度はリセットする
     if(controller.isGrounded){
+      //animator.SetBool("jump", false);
       moveDirection.y = 0;
       jumpMove = false;
     }
@@ -142,10 +143,10 @@ public class NejikoController : MonoBehaviour {
   }
 
   public void Jump(){
-    Debug.Log("jump");
     if(IsStan()) return;
     if(controller.isGrounded){
-      Debug.Log("jump speed set");
+      animator.SetTrigger("jump");
+      //animator.SetBool("jump", true);
       moveDirection.y = speedJump;
     }
   }
@@ -158,15 +159,20 @@ public class NejikoController : MonoBehaviour {
   }
 
   public void ShotBullet(){
+    GameObject bullet;
     if(IsStan()) return;
     if(shotPower <= 0) return;
     if(shotWait < ShotWaitTime) return;
     
     Vector3 position = transform.position;
-    position.z += 2;
-    BulletController bullet = new BulletController(bulletPrefab, position, (int)NearMiss());
-    //BulletController bullet = gameObject.AddComponent<BulletController>();
-    //bullet.Initialize(bulletPrefab, position, NearMiss());
+      position.z += 2.0f;
+    if(!IsSlide()){
+      position.y += 1.0f;
+    }else{
+      position.y += 0.3f;
+    }
+    bullet = (GameObject)Instantiate(bulletPrefab, position, Quaternion.identity);
+    bullet.SendMessage("SetBulletPower", NearMiss());
     NearMissReset();
 
     ConsumeShotPower();
@@ -191,7 +197,7 @@ public class NejikoController : MonoBehaviour {
       animator.SetTrigger("down");
 
       //ヒットしたオブジェクトは削除
-      Destroy(hit.gameObject);
+      //Destroy(hit.gameObject);
     }
   }
 

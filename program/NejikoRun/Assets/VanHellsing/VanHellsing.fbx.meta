@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 6777a405365ba3b458d86d2c6b1611cf
-timeCreated: 1472386227
+guid: 2b17307a228f1b344a7a8943f1158c46
+timeCreated: 1473004133
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -159,11 +159,13 @@ ModelImporter:
     400150: //RootNode
     4300000: body
     7400000: Stay
-    7400002: Armature|Down
-    7400004: Armature|Jump
-    7400006: Armature|Sliding
-    7400008: Armature|Stay
-    7400010: body|Sliding
+    7400002: Run
+    7400004: Jump
+    7400006: Sliding
+    7400008: Down
+    7400010: Armature|Jump
+    7400012: Armature|Sliding
+    7400014: Armature|Stay
     9500000: //RootNode
     13700000: body
   materials:
@@ -186,7 +188,907 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Stay
+      takeName: Stay
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/hip
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L/toe_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L/toe_L/toe_L_end
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R/toe_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R/toe_R/toe_R_end
+        weight: 1
+      - path: Armature/Bone/spine
+        weight: 1
+      - path: Armature/Bone/spine/chest
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002/chest.003
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002/chest.003/chest.003_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005/chest.006
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005/chest.006/chest.006_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002/coat.003
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002/coat.003/coat.003_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck/head
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L/finger1_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L/finger1_3_L/finger1_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L/finger2_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L/finger2_3_L/finger2_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L/finger3_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L/finger3_3_L/finger3_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L/finger4_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L/finger4_3_L/finger4_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L/finger5_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L/finger5_3_L/finger5_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R/finger1_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R/finger1_3_R/finger1_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R/finger2_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R/finger2_3_R/finger2_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R/finger3_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R/finger3_3_R/finger3_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R/finger4_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R/finger4_3_R/finger4_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R/finger5_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R/finger5_3_R/finger5_3_R_end
+        weight: 1
+      - path: body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Run
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/hip
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L/toe_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L/toe_L/toe_L_end
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R/toe_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R/toe_R/toe_R_end
+        weight: 1
+      - path: Armature/Bone/spine
+        weight: 1
+      - path: Armature/Bone/spine/chest
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002/chest.003
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002/chest.003/chest.003_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005/chest.006
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005/chest.006/chest.006_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002/coat.003
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002/coat.003/coat.003_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck/head
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L/finger1_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L/finger1_3_L/finger1_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L/finger2_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L/finger2_3_L/finger2_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L/finger3_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L/finger3_3_L/finger3_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L/finger4_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L/finger4_3_L/finger4_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L/finger5_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L/finger5_3_L/finger5_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R/finger1_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R/finger1_3_R/finger1_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R/finger2_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R/finger2_3_R/finger2_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R/finger3_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R/finger3_3_R/finger3_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R/finger4_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R/finger4_3_R/finger4_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R/finger5_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R/finger5_3_R/finger5_3_R_end
+        weight: 1
+      - path: body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump
+      takeName: Jump
+      firstFrame: 0
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/hip
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L/toe_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L/toe_L/toe_L_end
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R/toe_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R/toe_R/toe_R_end
+        weight: 1
+      - path: Armature/Bone/spine
+        weight: 1
+      - path: Armature/Bone/spine/chest
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002/chest.003
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002/chest.003/chest.003_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005/chest.006
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005/chest.006/chest.006_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002/coat.003
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002/coat.003/coat.003_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck/head
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L/finger1_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L/finger1_3_L/finger1_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L/finger2_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L/finger2_3_L/finger2_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L/finger3_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L/finger3_3_L/finger3_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L/finger4_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L/finger4_3_L/finger4_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L/finger5_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L/finger5_3_L/finger5_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R/finger1_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R/finger1_3_R/finger1_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R/finger2_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R/finger2_3_R/finger2_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R/finger3_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R/finger3_3_R/finger3_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R/finger4_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R/finger4_3_R/finger4_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R/finger5_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R/finger5_3_R/finger5_3_R_end
+        weight: 1
+      - path: body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sliding
+      takeName: Sliding
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/hip
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L/toe_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L/toe_L/toe_L_end
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R/toe_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R/toe_R/toe_R_end
+        weight: 1
+      - path: Armature/Bone/spine
+        weight: 1
+      - path: Armature/Bone/spine/chest
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002/chest.003
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002/chest.003/chest.003_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005/chest.006
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005/chest.006/chest.006_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002/coat.003
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002/coat.003/coat.003_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck/head
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L/finger1_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L/finger1_3_L/finger1_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L/finger2_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L/finger2_3_L/finger2_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L/finger3_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L/finger3_3_L/finger3_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L/finger4_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L/finger4_3_L/finger4_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L/finger5_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L/finger5_3_L/finger5_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R/finger1_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R/finger1_3_R/finger1_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R/finger2_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R/finger2_3_R/finger2_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R/finger3_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R/finger3_3_R/finger3_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R/finger4_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R/finger4_3_R/finger4_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R/finger5_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R/finger5_3_R/finger5_3_R_end
+        weight: 1
+      - path: body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Down
+      takeName: Down
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/hip
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L/toe_L
+        weight: 1
+      - path: Armature/Bone/hip/thigh_L/shin_L/toe_L/toe_L_end
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R/toe_R
+        weight: 1
+      - path: Armature/Bone/hip/thigh_R/shin_R/toe_R/toe_R_end
+        weight: 1
+      - path: Armature/Bone/spine
+        weight: 1
+      - path: Armature/Bone/spine/chest
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002/chest.003
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.001/chest.002/chest.003/chest.003_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005/chest.006
+        weight: 1
+      - path: Armature/Bone/spine/chest/chest.004/chest.005/chest.006/chest.006_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002/coat.003
+        weight: 1
+      - path: Armature/Bone/spine/chest/coat.001/goat.002/coat.003/coat.003_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck/head
+        weight: 1
+      - path: Armature/Bone/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L/finger1_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger1_1_L/finger_1_2_L/finger1_3_L/finger1_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L/finger2_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger2_1_L/finger2_2_L/finger2_3_L/finger2_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L/finger3_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger3_1_L/finger3_2_L/finger3_3_L/finger3_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L/finger4_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger4_1_L/finger4_2_L/finger4_3_L/finger4_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L/finger5_3_L
+        weight: 1
+      - path: Armature/Bone/spine/chest/upper_arm_L/forearm_L/hand_L/finger5_1_L/finger5_2_L/finger5_3_L/finger5_3_L_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R/finger1_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger1_1_R/finger1_2_R/finger1_3_R/finger1_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R/finger2_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger2_1_R/finger2_2_R/finger2_3_R/finger2_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R/finger3_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger3_1_R/finger3_2_R/finger3_3_R/finger3_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R/finger4_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger4_1_R/finger4_2_R/finger4_3_R/finger4_3_R_end
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R/finger5_3_R
+        weight: 1
+      - path: Armature/Bone/spine/chest/upperarm_R/forearm_R/hand_R/finger5_1_R/finger5_2_R/finger5_3_R/finger5_3_R_end
+        weight: 1
+      - path: body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

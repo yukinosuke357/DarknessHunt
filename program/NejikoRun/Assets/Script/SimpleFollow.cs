@@ -10,7 +10,6 @@ public class SimpleFollow : MonoBehaviour {
   // Use this for initialization
   void Start () {
     diff = target.transform.position - transform.position;
-    diff.x = diff.x;
   }
   
   // Update is called once per frame

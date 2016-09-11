@@ -7,29 +7,12 @@ public class BulletController : MonoBehaviour {
   public float speedZ;
   float initialPosition;
   public int bulletPower = 1;
+  public float bulletLife;
   GameObject thisBullet;
-
-   public BulletController(GameObject prefab, Vector3 position, int nearMiss){
-    Instantiate(prefab, position, Quaternion.identity);
-    SetBulletPower(nearMiss);
-  }
-  
-  //public BulletController Instantiate(GameObject prefab, Vector3 position, int nearMiss){
-  //  Instantiate(prefab, position, Quaternion.identity) ;
-  //  SetBulletPower(nearMiss);
-  //  bulletPower = nearMiss;
-  //}
-
-  //public void Initialize(GameObject prefab, Vector3 position, int power){
-  //  thisBullet = (GameObject)Instantiate(prefab, position, Quaternion.identity);
-  //  SetBulletPower(power);
-  //  initialPosition = (float)transform.position.z;
-  //}
+  public GameObject character;
 
   void Start () {
-    ///Instantiate(prefab, position, Quaternion.identity);
     initialPosition = (float)transform.position.z;
-    //SetBulletPower(nearMiss);
   }
   
   void Update () {
@@ -40,20 +23,20 @@ public class BulletController : MonoBehaviour {
     Vector3 globalDirection = transform.TransformDirection(moveDirection);
     transform.position = nowPosition + globalDirection * Time.deltaTime;
   
-    if(transform.position.z - initialPosition > 30.0f){
-      Destroy(this.gameObject);
+    if(transform.position.z - initialPosition > bulletLife){
+      Debug.Log("near" + bulletPower );
+      Destroy(gameObject);
     }
   }
 
   void OnCollisionEnter(Collision hit){
     if(hit.gameObject.tag == "Robo"){
-      Destroy(hit.gameObject);
-      //EnemyBase enemy = gameObject.GetComponent("hit");
-      Destroy(this.gameObject);
+      hit.gameObject.SendMessage("LifeReduce", bulletPower);
+      Destroy(gameObject);
     }
   }
 
   public void SetBulletPower(int power){
-    bulletPower = power;
+    bulletPower = power + 1;
   }
 }
