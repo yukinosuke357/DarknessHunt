@@ -11,7 +11,7 @@ public class NejikoController : MonoBehaviour {
   const int ShotRecoverySecond = 3;
   const int ShotWaitTime = 1;
   const float StunDeration = 0.5f;
-  const float slideDeration = 2.0f;
+  const float slideDeration = 1.8f;
   const float shotDuaration = 0.4f;
   const float shotRecoveryDuaration = 0.4f;
   
@@ -150,6 +150,7 @@ public class NejikoController : MonoBehaviour {
 
   public void Jump(){
     if(IsStan()) return;
+    if(IsSlide()) return;
     if(controller.isGrounded){
       animator.SetTrigger("jump");
       //animator.SetBool("jump", true);
@@ -159,6 +160,7 @@ public class NejikoController : MonoBehaviour {
 
   public void MoveToSlide(){
     if(IsStan()) return;
+    if(IsSlide()) return;
  //   controller.transform.localScale = new Vector3(1.0f, 0.3f, 1.0f);
     animator.SetTrigger("slide");
     slideTime = slideDeration;

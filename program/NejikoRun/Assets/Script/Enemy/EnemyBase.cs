@@ -5,6 +5,7 @@ public class EnemyBase : MonoBehaviour{
 public Vector3 initialPosition;
 public Vector3 move;
 public int lifePoint;
+int downDuaration = 40;
 
   void Start () {
     initialPosition = transform.localPosition;
@@ -19,7 +20,12 @@ public int lifePoint;
   }
   
   void Update () {
-    if(!IsAlive()) Destroy(this.gameObject);
+    if(!IsAlive()) {
+      downDuaration--;
+      if(downDuaration < 0){
+        Destroy(this.gameObject);
+      }
+    }
   }
 
   public void LifeReduce(int power){
