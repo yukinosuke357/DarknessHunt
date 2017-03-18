@@ -7,6 +7,8 @@ public bool direction = false;
 public GameObject crossBow;
 bool shotFlag = true;
 public GameObject[] Player;
+public int playerDistanceX = 1;
+public int playerDistanceZ = 20;
 
   void Start () {
     Player = GameObject.FindGameObjectsWithTag("Player"); 
@@ -46,14 +48,14 @@ public GameObject[] Player;
   }
 
   bool Xflag(){
-    if(Mathf.Abs(Player[0].transform.position.x - transform.position.x) < 1){
+    if(Mathf.Abs(Player[0].transform.position.x - transform.position.x) < playerDistanceX){
       return true;
     }
     return false;
   }
   
   bool Yflag(){
-    if(Mathf.Abs(Player[0].transform.position.z - transform.position.z) < 20){
+    if(Mathf.Abs(Player[0].transform.position.z - transform.position.z) < playerDistanceZ){
       return true;
     }
     return false;

@@ -31,7 +31,7 @@ int downDuaration = 40;
   public void LifeReduce(int power){
     lifePoint = lifePoint - power;
   }
-
+  
   public virtual void UpdateMove(){}
   public virtual void UpdateAttack(){}
 }

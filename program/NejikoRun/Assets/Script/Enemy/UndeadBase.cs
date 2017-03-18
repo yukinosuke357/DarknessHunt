@@ -12,7 +12,6 @@ public class UndeadBase : EnemyBase{
     if(!IsAlive()) {
       GetComponent<CharacterController>().enabled = false;
       int animationSelect = (int)Random.Range(0,2);
-      Debug.Log(animationSelect);
       if(animationSelect == 0){
         animator.SetTrigger("down001");
       }else{

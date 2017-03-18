@@ -211,9 +211,11 @@ public class NejikoController : MonoBehaviour {
     Vector3 effect_position;
     effect_position = other.transform.position;
     effect_position.z += 2.0f;
+    Debug.Log("effect:"+other.name);
     if(other.gameObject.tag == "Robo"){
       NearMissAdd();
-      Instantiate(effectPrefab, effect_position, Quaternion.identity);
+      GameObject effect = (GameObject)Instantiate(effectPrefab, effect_position, Quaternion.identity);
+      effect.transform.parent = this.transform;
     }
   }
 
